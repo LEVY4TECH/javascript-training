@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div>
+        JS OBJECTS
+    </div>
+
+    <script>
+
+        let person = {
+            name:"stacy",
+            age:18,
+            height:"170cm",
+            job:"software developer",
+            isMarried:false,
+            "full address":"Nairobi"
+        }
+        // using dot notation
+        console.log(person.job)
+
+        let height = person.height
+        console.log(height)
+
+        // using bracket notation
+        console.log(person["age"])
+        console.log(person["full address"])
+
+
+        let key = "name"
+        console.log(person.key)
+        console.log(person[key])
+
+        let user = {
+        name: "Alice",
+        hobbies: ["cycling", "painting"],
+        posts: [
+          {
+            id: 1,
+            title: "My first post",
+            comments: [
+              { id: 101, text: "Great post!" },
+              { id: 102, text: "Thanks for sharing." },
+            ],
+          },
+          {
+            id: 2,
+            title: "Another day",
+            comments: [],
+          },
+        ],
+      };
+
+    //   let keyy = "posts"
+      console.log(user.posts[0].comments[1].text)
+
+      console.log(Object.keys(user))
+
+      let keys = Object.keys(user)
+      let values = Object.values(user)
+
+      let entries = Object.entries(user)
+      console.log(keys)
+      console.log(values)
+      console.log(entries)
+
+
+
+    </script>
+    
+</body>
+</html>

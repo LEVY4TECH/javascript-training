@@ -1,31 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
 
     <script>
-        let arr=[1,2,3,4,5,"levy",false,[5,6,7,[8,9,10,[11,"jane"]]]]
-        arr[5]='joyce'
+        let arr = [1, 2, 3, 4, 5, "levy", false, [5, 6, 7, [8, 9, 10, [11, "jane"]]]]
+        arr[5] = 'joyce'
         console.log(arr.length)
 
         // adding at the end of an array
-        arr.push("67",true,false)
+        arr.push("67", true, false)
         // arr.push(true)
         // arr.push(false)
-        console.log("pushed array",arr)
+        console.log("pushed array", arr)
 
         // adding at the start
-        arr.unshift("JS","Python","Rust")
-        console.log("unshifted array",arr)
+        arr.unshift("JS", "Python", "Rust")
+        console.log("unshifted array", arr)
 
         // removing last and first elements from an array
         arr.pop()
         arr.shift()
-        console.log("popped & shifted array",arr)
+        console.log("popped & shifted array", arr)
 
         // arr.reverse()
         // let arr2=arr.slice(2,7)
@@ -33,21 +35,53 @@
 
         // includes
         arr.includes("joyce")
-        let arr2=arr.includes("joyce")
-        console.log("included array",arr2)
+        let arr2 = arr.includes("joyce")
+        console.log("included array", arr2)
 
         // 
         console.log(arr.includes("jane"))
 
         // lastIndexOf
-        let lio=arr.lastIndexOf("joyce")
-        console.log("lio",lio)
+        let lio = arr.lastIndexOf("joyce")
+        console.log("lio", lio)
+
+        // splice - removing elements
+        let fruits = ["mango", "apple", "pineapple", "lemon"]
+        fruits.splice(1, 2)
+        console.log(fruits)
+
+        // splice - addin' elements
+        let numbers = [1, 2, 3, 4, 5]
+        numbers.splice(3, 2, 7, 8)
+        console.log(numbers)
+
+        // splice - replacing elements
+        let names = ["jane", "john", "jake"]
+        names.splice(1, 1, "mike")
+        console.log(names)
+
+
+        // Given an array “sourceArray”, extract a subarray “extractedArray” from index 2 to index 4 using the .slice() method.
+        //  Then, modify the extractedArray by replacing its elements with 'x', 'y', and 'z' using the .splice() method.
+        //  Finally, display both the sourceArray and the modified extractedArray.
+
+        let sourcearray = ["a","b","c","d","e","f"]
+        
+        let extractedArray = sourcearray.slice(2,5)
+
+        extractedArray.splice(0,3,"x","y","z")
+        
+        console.log(extractedArray)
+
+
+
 
 
 
 
     </script>
 
-    
+
 </body>
+
 </html>
