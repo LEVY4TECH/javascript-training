@@ -135,19 +135,21 @@
         },
        
       };
-
+    //   displaying false in learning
       console.log(company.departments.engineering.teams.frontend.members[0].skills.db[0].nosql.mongodb[1])
 
+    //   displaying nodejs in languages
       console.log(company.departments.engineering.teams.backend.members[0].languages[2])
 
+    //   displaying true in docker
       console.log(company.departments.engineering.teams.backend.members[1].certifications.docker)
 
+    //   displaying the keys only of certifications
       let keys = Object.keys(company.departments.engineering.teams.backend.members[1].certifications)
-
       console.log(keys)
 
+    //   displaying the values only of skills
       let values = Object.values(company.departments.engineering.teams.frontend.members[1].skills)
-
       console.log(values)
 
     //   console.log(company.departments[0][1][0][1][2][3][1][0])
