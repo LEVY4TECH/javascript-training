@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        // Spread Operator - is a feature that allows you to spread elements of an iterable(sth that can be looped through) e.g array, object, strings
+
+        let arr = [1,2,3]
+
+        // Uses of Spread Operators
+        // 1. Copy an array
+
+        let num = [1,2,3,4,5]
+        let num2 = [...num]
+        console.log(num2)
+
+        // 2. Merging arrays
+
+        let numb = [1,2,3,4,5]
+        let numb2 = [6,7,8,9]
+        let numb3 = [...numb,...numb2]
+        console.log(numb3)
+
+        // 3. Copying Objects
+
+        let table1 = {
+            height:"90cm",
+            width:"100cm"
+        }
+
+        let table2 = {
+            ...table1
+        }
+
+        console.log(table1)
+
+        // 4.  Merging Objects
+
+        let table3 = {
+            height:"90cm",
+            width:"100cm"
+        }
+
+        let table4 = {
+            color:"grey",
+            condition:"new"
+        }
+        let table5 = {
+            ...table3,...table4
+        }
+
+        console.log(table5)
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

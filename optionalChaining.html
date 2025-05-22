@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let car = {
+            make:"toyota",
+            yom:"2005",
+            past_owners:{
+                first:"joyce",
+                second:"Trevor",
+                third:null,
+                fourth:{
+                    owner1:"John",
+                    owner2:"Anne"
+                }
+            }
+        }
+
+        // console.log(car.past_owners.fifth.owner1)
+
+        // Uncaught type error - cannot read properties...
+        // you've got to an undefined point and still went further to try and access other nested objects
+
+        // undefined
+        // You've tried accessing a value using a wrong or an undefined key and you stopped there
+
+        // Optional Chaining - is a feature that allows you to safely access nested properties of an object without worrying if part of the chain is null or undefined
+        // Instead of throwing an error when you try to access a null or undefined property, optional chaing return undefined immediately and stops
+        // It uses a question mark symbol(?)
+        
+        
+        console.log(car?.past_owners?.third)
+    </script>
+
+
+    
+</body>
+</html>
