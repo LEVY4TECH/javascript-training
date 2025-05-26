@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        // Create a variable and console log whether a number is odd or even
+        let numb = 1
+        if(numb%2==0){
+            console.log("Number is even")
+        }else{
+            console.log("Number is odd")
+        }
+
+        // Create 3 variables and console log the largest of them. Assume that the user would not enter any two numbers which are the same.
+        let num1 = parseInt(prompt("Enter num 1"))
+        let num2 = parseInt(prompt("Enter num 2"))
+        let num3 = parseInt(prompt("Enter num 3"))
+
+        if(num1>num2 && num1>num3){
+            console.log(`${num1} is the largest`)
+        }else if(num2>num1 && num2>num3){
+            console.log(`${num2} is the largest`)
+        }else{
+            console.log(`${num3} is the largest`)
+        }
+
+        // Create a variable called year and enter the a random year. Check if the year is a leap year or not.
+        //  A leap year is a year that is divisible by 4  not divisible by 100 or divisible  by 400.
+        let year = 2024
+        if(year%4==0){
+            console.log(`${year} is a leap year`)
+        }else{
+            console.log(`${year} is not a leap year`)
+        }
+
+        // Get user input using prompt("Enter your age: "). If user is 18 or older, give feedback:'You are old enough to drive' 
+        // but if not 18, give another feedback stating to wait for the number of years he needs to turn 18.
+
+        let agee = 18
+        let age = parseInt(prompt("Enter your age:"))
+
+        if(age>=agee){
+            console.log("You are old enough to drive")
+        }else{
+            let wait = agee - age;
+            console.log(`Wait for ${wait} year(s) to be allowed to drive`)
+        }
+
+        // write code which can give grades to students according to their scores
+
+        let marks = parseInt(prompt("Enter your marks:"))
+        if(marks>=90 && marks<=100){
+            console.log("A")
+        }else if(marks>=70 && marks<=89){
+            console.log("B")
+        }else if(marks>=60 && marks<=69){
+            console.log("C")
+        }else if(marks>=50 && marks<=59){
+            console.log("D")
+        }else{
+            console.log("F")
+        }
+
+        // check if the season is Autumn, Winter, Spring or Summer. If the user input is:
+        // september, october, november: autumn
+        // december, january, february: winter 
+        // march, april, may: spring
+        // june, july, august: summer
+
+        let season = prompt("Input Month:").toLocaleLowerCase()
+        if(season==="september"||"october"||"november"){
+            console.log("Season is Autumn")
+        }else if(season==="december"||"january"||"february"){
+            console.log("Season is Winter")
+        }else if(season==="march"||"april"||"may"){
+            console.log("Season is Spring")
+        }else if(season==="june"||"july"||"august"){
+            console.log("Season is Summer")
+        }else{
+            console.log("Invalid month input")
+        }
+        
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>
