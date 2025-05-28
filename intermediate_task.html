@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // Write a program that prompts the user to enter the base and height of a triangle and returns its area.
+
+        function area(base,height){
+            area = base*height*0.5
+            return area
+        }
+
+        base = parseInt(prompt("Enter base: "))
+        height = parseInt(prompt("Enter height: "))
+
+        area = area(base,height)
+        console.log(area)
+
+        // Prompt the user for a number either on a form input or the terminal. Depending on whether the number is even or odd,
+        //  display  either “odd” or “even” to the user.
+
+        function check_number(){
+
+            num = parseInt(prompt("Enter Number: "))
+            if(num % 2 == 0){
+                console.log(`${num} is an even number`)
+            }else{
+                console.log(`${num} is a odd number`)
+            }
+        }
+
+        check_number()
+
+        // Write a program which gets a phone number from a form input or terminal.
+        //  Validates the phone number by checking if it starts with +254.. or 07.. or 7… or 254.. or 01... or  1..
+        //  Convert the number to start with +254… 
+        // e.g if a user enters “0712345678”, the program should display “+254712345678”
+        // e.g if a user enters “0112345678”, the program should display “+254112345678”
+        // e.g if a user enters “712345678”, the program should display “+254712345678”
+
+
+        // phone_number=input('Enter phone number: ')
+        // correct_format='+254'
+
+        // if phone_number.startswith('+254') and len(phone_number)==13:
+        //     results=f'{phone_number}'
+        // elif phone_number.startswith('254') and len(phone_number)==12:
+        //     results=f'{correct_format}{phone_number[3:]}'
+        // elif phone_number.startswith('07') and len(phone_number)==10:
+        //     results=f'{correct_format}{phone_number[1:]}'
+        // elif phone_number.startswith('01') and len(phone_number)==10:
+        //     results=f'{correct_format}{phone_number[1:]}'
+        // elif phone_number.startswith('7') and len(phone_number)==9:
+        //     results=f'{correct_format}{phone_number}'
+        // elif phone_number.startswith('1') and len(phone_number)==9:
+        //     results=f'{correct_format}{phone_number}'
+        // else:
+        //     results='invalid phone number'
+
+        // print(results)
+
+        function number_converter(){
+            let phone_number = prompt("Enter phone number: ")
+            let correct_format = '+254'
+
+            if(phone_number.startsWith('+254') && length(phone_number) == 13){
+                return `${phone_number}`
+            }else if(phone_number.startsWith('+254') && phone_number.length ==12){
+                return `${correct_format}${phone_number.slice(3)}`
+            }else if(phone_number.startsWith('07') && phone_number.length == 10){
+                return `${correct_format}${phone_number.slice(1)}`
+            }else if(phone_number.startsWith('01') && phone_number.length == 10){
+                return `${correct_format}${phone_number.slice(3)}`
+            }else if(phone_number.startsWith('7') && phone_number.length == 9){
+                return `${correct_format}${phone_number}`
+            }else if(phone_number.startsWith('1') && phone_number.length == 9){
+                return `${correct_format}${phone_number}`
+            }else{
+                return 'Invalid phone number'
+            }
+        }
+
+        console.log(number_converter())
+
+
+ 
+
+    </script>
+</body>
+</html>
