@@ -10,31 +10,31 @@
 
         // Write a program that prompts the user to enter the base and height of a triangle and returns its area.
 
-        function area(base,height){
-            area = base*height*0.5
-            return area
-        }
+        // function area(base,height){
+        //     area = base*height*0.5
+        //     return area
+        // }
 
-        base = parseInt(prompt("Enter base: "))
-        height = parseInt(prompt("Enter height: "))
+        // base = parseInt(prompt("Enter base: "))
+        // height = parseInt(prompt("Enter height: "))
 
-        area = area(base,height)
-        console.log(area)
+        // area = area(base,height)
+        // console.log(area)
 
         // Prompt the user for a number either on a form input or the terminal. Depending on whether the number is even or odd,
         //  display  either “odd” or “even” to the user.
 
-        function check_number(){
+        // function check_number(){
 
-            num = parseInt(prompt("Enter Number: "))
-            if(num % 2 == 0){
-                console.log(`${num} is an even number`)
-            }else{
-                console.log(`${num} is a odd number`)
-            }
-        }
+        //     num = parseInt(prompt("Enter Number: "))
+        //     if(num % 2 == 0){
+        //         console.log(`${num} is an even number`)
+        //     }else{
+        //         console.log(`${num} is a odd number`)
+        //     }
+        // }
 
-        check_number()
+        // check_number()
 
         // Write a program which gets a phone number from a form input or terminal.
         //  Validates the phone number by checking if it starts with +254.. or 07.. or 7… or 254.. or 01... or  1..
@@ -64,28 +64,173 @@
 
         // print(results)
 
-        function number_converter(){
-            let phone_number = prompt("Enter phone number: ")
-            let correct_format = '+254'
+        // function number_converter(){
+        //     let phone_number = prompt("Enter phone number: ")
+        //     let correct_format = '+254'
 
-            if(phone_number.startsWith('+254') && length(phone_number) == 13){
-                return `${phone_number}`
-            }else if(phone_number.startsWith('+254') && phone_number.length ==12){
-                return `${correct_format}${phone_number.slice(3)}`
-            }else if(phone_number.startsWith('07') && phone_number.length == 10){
-                return `${correct_format}${phone_number.slice(1)}`
-            }else if(phone_number.startsWith('01') && phone_number.length == 10){
-                return `${correct_format}${phone_number.slice(3)}`
-            }else if(phone_number.startsWith('7') && phone_number.length == 9){
-                return `${correct_format}${phone_number}`
-            }else if(phone_number.startsWith('1') && phone_number.length == 9){
-                return `${correct_format}${phone_number}`
-            }else{
-                return 'Invalid phone number'
-            }
-        }
+        //     if(phone_number.startsWith('+254') && length(phone_number) == 13){
+        //         return `${phone_number}`
+        //     }else if(phone_number.startsWith('+254') && phone_number.length ==12){
+        //         return `${correct_format}${phone_number.slice(3)}`
+        //     }else if(phone_number.startsWith('07') && phone_number.length == 10){
+        //         return `${correct_format}${phone_number.slice(1)}`
+        //     }else if(phone_number.startsWith('01') && phone_number.length == 10){
+        //         return `${correct_format}${phone_number.slice(3)}`
+        //     }else if(phone_number.startsWith('7') && phone_number.length == 9){
+        //         return `${correct_format}${phone_number}`
+        //     }else if(phone_number.startsWith('1') && phone_number.length == 9){
+        //         return `${correct_format}${phone_number}`
+        //     }else{
+        //         return 'Invalid phone number'
+        //     }
+        // }
 
-        console.log(number_converter())
+        // console.log(number_converter())
+
+
+        // Write a program which accepts email as form input or from terminal. Validate the email by checking if it's a valid email. 
+        // Hint: Check if it contains an “@” symbol and “.” symbol.
+
+
+        // def validation(email):
+        //     at='@'
+        //     dot='.'
+        //     if at and dot in email:
+        //         results='valid email'
+        //     else:
+        //         results='Invalid email'
+
+        //     return results
+        // x=validation('levy4star@gmail.com')
+        // print(x)
+
+        // email=input('Enter email: ')
+        // d=validation(email)
+        // print(d)
+
+        // function validation(){
+        //     let email = prompt("enter email");
+        //     at = '@';
+        //     dot = '.';
+        //     if(email.includes(at) && email.includes(dot)){
+        //         return "Valid Email"
+        //     }else{
+        //         return "Invalid Email"
+        //     }
+        // }
+
+        // console.log(validation())
+
+
+        // Implement a program that takes 3 users  inputs from the terminal or the Browser, and stores them in three variables.
+        //  Return the largest of the three. Do this without using the the inbuilt max () function!
+
+        // function largest(){
+        //     let num1 = parseInt(prompt("Enter num1:"));
+        //     let num2 = parseInt(prompt("Enter num2:"));
+        //     let num3 = parseInt(prompt("Enter num3:"))
+
+        //     if(num1>num2 && num1>num3){
+        //         return `${num1} is the largest`
+        //     }else if(num2>num1 && num2>num3){
+        //         return `${num2} is the largest`
+        //     }else{
+        //         return `${num3} is the largest`
+        //     }
+        // }
+
+        // console.log(largest())
+
+
+        // correct_password='admin@123'
+        // attempts=4
+
+        // for i in range(1,5):
+        //     password=input('Enter your password: ')
+        //     if password==correct_password:
+        //         print('Access granted')
+        //         break
+        //     else:
+        //         remaining_attempts=attempts-i
+        //         if remaining_attempts>0:
+        //             print(f'wrong password, you have {remaining_attempts} attempts remaining')
+        //         else:
+        //             print('Account Blocked!')
+
+        // Write a program that lets the user input a password.
+        //  Give them only 4 attempts to check the passwords entered against “admin@123”. 
+        // If the password is correct access is granted. After you show them a message , the account is blocked.
+
+        // function password_checker(){
+        //     correct_password = 'admin@123'
+        //     attempts = 4
+
+        //     let range = []
+        //     for( let i = 1; i<5; i++){
+        //         range.push(i)
+        //     }
+        //     password = prompt("Enter your password:")
+        //     if(password == correct_password){
+        //         return "Access Granted"
+        //         break;
+        //     }else{
+        //         remaining_attempts = attempts - i;
+        //         if(remaining_attempts > 0){
+        //             return `Wrong password, you have ${remaining_attempts} attempst remaining`
+        //         }else{
+        //             return "Account Blocked"
+        //         }
+        //     }
+        // }
+
+//         function password_checker() {
+//     const correct_password = 'admin@123';
+//     let attempts = 4;
+
+//     for (let i = 1; i <= attempts; i++) {
+//         let password = prompt("Enter your password:");
+        
+//         if (password === correct_password) {
+//             return "Access Granted";
+//         } else {
+//             let remaining = attempts - i;
+//             if (remaining > 0) {
+//                 alert(`Wrong password, you have ${remaining} attempt(s) remaining`);
+//             } else {
+//                 return "Account Blocked";
+//             }
+//         }
+//     }
+// }
+// console.log(password_checker())
+
+
+// Write that prompts the user to input student marks. The input should be between 0 and 100.Then output the correct grade: 
+// A > 79 , B - 60 to 79, C  > 49 to 59, D - 40 to 49, E - less 40
+
+function grade_allocator(){
+    let marks = parseInt(prompt("Enter your Marks:"))
+    if(marks>79 && marks<=100){
+        return "A"
+    }else if(marks>=60 && marks<=79){
+        return "B"
+    }else if(marks>49 && marks<=59){
+        return "C"
+    }else if(marks>=40 && marks>=49){
+        return "D"
+    }else if(marks>=0 && marks<40){
+        return "E"
+    }else{
+        return "Invalid Input"
+    }
+}
+console.log(grade_allocator())
+
+        
+
+
+
+        
 
 
  
