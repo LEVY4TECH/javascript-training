@@ -64,6 +64,37 @@
 
         // NSSF
 
+        function calc_nssf(gross,rate = 0.06){
+            nssf = gross*rate
+            return nssf
+        }
+
+        NSSF = calc_nssf(gross_salary)
+
+        function calc_nhdf(gross,rate = 0.015){
+            nhdf = gross*rate
+            return nhdf
+        }
+
+        NHDF = calc_nhdf(gross_salary)
+
+        // taxable income
+
+        function calc_taxable_income(gross,NSSF,NHDF,NHIF){
+            taxable_income = gross_salary - (NSSF + NHDF + NHIF)
+            return taxable_income
+        }
+
+        taxable_income = calc_taxable_income(gross_salary,NSSF,NHDF,NHIF)
+
+        // PAYE
+
+        function calc_payee(taxable_income){
+            notes = 'is your payee'
+
+            if(taxable_income>)
+        }
+
     </script>
     
 </body>
