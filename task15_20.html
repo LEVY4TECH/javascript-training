@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        function calc_gross_salary(basic,benefits){
+            gross = basic + benefits
+            return gross
+        }
+
+        basic_salary = parseFloat(prompt("Enter basic salary:"))
+        benefits = parseFloat(prompt("Enter allowances:"))
+
+        gross_salary = calc_gross_salary(basic_salary,benefits)
+
+        // NHIF
+
+        function calc_nhif(summ){
+            notes = 'is your Monthly NHIF contributions'
+
+            if(summ<=5999){
+                return `150 ${notes}`
+            }else if(summ>=600 && summ<=7999){
+                return `300 ${notes}`
+            }else if(summ>=8000 && summ<=11999){
+                return `400 ${notes}`
+            }else if(summ>=12000 && summ<=14999){
+                return `500 ${notes}`
+            }else if(summ>=15000 && summ<=19999){
+                return `600 ${notes}`
+            }else if(summ>=20000 && summ<=24999){
+                return `750 ${notes}`
+            }else if(summ>=25000 && summ<=29999){
+                return `850 ${notes}`
+            }else if(summ>=30000 && summ<=34999){
+                return `900 ${notes}`
+            }else if(summ>=35000 && summ<=39999){
+                return `950 ${notes}`
+            }else if(summ>=40000 && summ<=44999){
+                return `1000 ${notes}`
+            }else if(summ>=45000 && summ<=49999){
+                return `1100 ${notes}`
+            }else if(summ>=50000 && summ<=59999){
+                return `1200 ${notes}`
+            }else if(summ>=60000 && summ<=69999){
+                return `1300 ${notes}`
+            }else if(summ>=70000 && summ<=79999){
+                return `1400 ${notes}`
+            }else if(summ>=80000 && summ<=89999){
+                return `1500 ${notes}`
+            }else if(summ>=90000 && summ<=99999){
+                return `1600 ${notes}`
+            }else{
+                return `1700 ${notes}`
+            }
+        }
+
+        NHIF = calc_nhif(gross_salary)
+
+        // NSSF
+
+    </script>
+    
+</body>
+</html>
