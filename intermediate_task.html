@@ -208,25 +208,99 @@
 // Write that prompts the user to input student marks. The input should be between 0 and 100.Then output the correct grade: 
 // A > 79 , B - 60 to 79, C  > 49 to 59, D - 40 to 49, E - less 40
 
-function grade_allocator(){
-    let marks = parseInt(prompt("Enter your Marks:"))
-    if(marks>79 && marks<=100){
-        return "A"
-    }else if(marks>=60 && marks<=79){
-        return "B"
-    }else if(marks>49 && marks<=59){
-        return "C"
-    }else if(marks>=40 && marks>=49){
-        return "D"
-    }else if(marks>=0 && marks<40){
-        return "E"
-    }else{
-        return "Invalid Input"
-    }
-}
-console.log(grade_allocator())
+// function grade_allocator(){
+//     let marks = parseInt(prompt("Enter your Marks:"))
+//     if(marks>79 && marks<=100){
+//         return "A"
+//     }else if(marks>=60 && marks<=79){
+//         return "B"
+//     }else if(marks>49 && marks<=59){
+//         return "C"
+//     }else if(marks>=40 && marks>=49){
+//         return "D"
+//     }else if(marks>=0 && marks<40){
+//         return "E"
+//     }else{
+//         return "Invalid Input"
+//     }
+// }
+// console.log(grade_allocator())
 
-        
+// Write a program that takes as input the speed of a car e.g 80.
+//  If the speed is less than 70, it should print “Ok”. 
+// Otherwise, for every 5 km/s above the speed limit (70),
+//  it should give the driver one demerit point and print the total number of demerit points.
+// For example, if the speed is 80, it should print: “Points: 2”.
+//  If the driver gets more than 12 points, the function should print: “License suspended”.
+
+
+// let my_speed = parseInt(prompt("Enter your speed:"))
+
+// function check_speed(speed){
+//     let speed_limit = 70
+//     if (speed <= 70){
+//         return "Okay"
+//     }
+//     let overspeed = speed - speed_limit
+//     let points = (overspeed - (overspeed % 5) / 5)
+//     if (overspeed % 5 !==0){
+//         points +=1
+//     }
+//     if (points > 12){
+//         return "License suspended"
+//     }else{
+//         return "points is", points
+//     }
+    
+// }
+
+// speed_check = check_speed(my_speed)
+// console.log(speed_check)
+
+// number 11
+// Write a program that takes the date of birth of a person
+//  and the program outputs the age in terms of
+//  years,months,days TODAY.
+
+// ignores the leap year - ASSIGNMENT
+
+let full_birthdate = prompt("Enter your birthdate in the format YYYY-MM-DD")
+
+let date_parts = full_birthdate.split('-');
+console.log(date_parts);
+
+let birthYear = parseInt(date_parts[0]);
+console.log(birthYear);
+let birthMonth = parseInt(date_parts[1]);
+let birthDate = parseInt(date_parts[2]);
+
+let todayDate = 30;
+let todayMonth = 5;
+let todayYear = 2025;
+
+let monthDays = [31,28,31,30,31,30,31,31,30,31,30,31]
+
+if (birthDate > todayDate){
+    todayMonth--
+    todayDate +=monthDays[(todayMonth - 1 + 12) % 12]
+}
+
+let calculated_date = todayDate - birthDate;
+let calculated_month;
+let calculated_year;
+
+if (birthMonth > todayMonth){
+    calculated_month = 12 - (birthMonth - todayMonth);
+    calculated_year = todayYear - birthYear - 1;
+}else{
+    calculated_month = todayMonth - birthMonth;
+    calculated_year = todayYear - birthYear;
+}
+
+console.log(`Age in Years ${calculated_year}, Months ${calculated_month}, Days ${calculated_date}`)
+
+
+
 
 
 
